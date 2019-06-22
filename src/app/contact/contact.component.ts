@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   	submitted: boolean;
   	formControls = this.contactService.form.controls;
   	showSuccessMessage: boolean;
-
+  	important: boolean;
   ngOnInit() {
   }
 
@@ -31,9 +31,10 @@ export class ContactComponent implements OnInit {
 	  			this.contactService.form.reset();
   			
   		}
+
   }
   onImportantSubmit(){
-  	this.submitted = true;
+  	this.important = true;
   		if (this.contactService.form.valid) {
   			if (this.contactService.form.get("$key").value == null) {
   				this.contactService.insertContact(this.contactService.form.value);

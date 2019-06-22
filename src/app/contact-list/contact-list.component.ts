@@ -26,7 +26,7 @@ export class ContactListComponent implements OnInit {
   }
   onDelete($key){
       if(confirm("Are you sure you want to delete this contact?")){
-       this .contactService.deleteContact($key);
+       this.contactService.deleteContact($key);
        this.showDeleteMessage = true;
        setTimeout(()=> this.showDeleteMessage = false , 5000)
      }

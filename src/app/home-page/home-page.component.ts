@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 	public homeHeading:string;
-	public homeText: string;
+	
 
   constructor() {
   	this.homeHeading = "Home";
-  	this.homeText = "Content";
+  	
    }
 
   ngOnInit() {
