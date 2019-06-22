@@ -33,7 +33,7 @@ export class ContactListComponent implements OnInit {
    }
    filterCondition(contact){
 
-   	return contact.firstName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
+   	return contact.lastName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
    }
 
 }

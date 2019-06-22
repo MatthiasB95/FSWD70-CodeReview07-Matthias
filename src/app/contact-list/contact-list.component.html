@@ -1,17 +1,17 @@
 <form class="form-inline">
 	<input name="searchInput" class="form-control" placeholder="Name" #searchInput="ngModel"
-	[(ngModel)] = "searchText" style="width: 80%;">
+	[(ngModel)] = "searchText" style="width: 80%; background-color: #B9B9B9;">
 		<button class="btn btn-dark" (click)="searchText=''">Filter</button>
 </form>
 <table class="table table-sm">
       <h3>Contacts</h3>
         <ng-container *ngFor="let contact of contactArray">
                 <tr class="table-dark" *ngIf = "filterCondition(contact)" >
-                        <td>{{contact.firstName}}</td>
-                        <td>{{contact.lastName}}</td>
-                        <td>{{contact.number}}</td>
-                        <td>
-                                <button class="btn btn-info" (click) ="contactService.populateForm(contact)">Edit</button>
+                        <td class="bg-dark">{{contact.firstName}}</td>
+                        <td class="bg-dark">{{contact.lastName}}</td>
+                        <td class="bg-dark">+{{contact.number}}</td>
+                        <td class="bg-dark">
+                                <button class="btn btn-success" (click) ="contactService.populateForm(contact)">Edit</button>
                                 <button class="btn btn-danger" (click) = "onDelete(contact.$key)">Delete</button>
                         </td>
                 </tr>
